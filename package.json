@@ -1,0 +1,23 @@
+{
+  "name": "flyrank-pdf-report-generator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FlyRank Backend Track A8 - SQL to PDF report generator",
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "seed": "node scripts/seed.js",
+    "report:data": "node scripts/preview-report-data.js",
+    "check": "node --check src/server.js && node --check src/db/database.js && node --check src/services/reportService.js && node --check src/routes/reportRoutes.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "playwright": "^1.56.1"
+  }
+}
